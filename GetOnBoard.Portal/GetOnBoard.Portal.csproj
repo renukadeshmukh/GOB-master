@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{431254F4-1F64-489C-AE3E-064921265F87}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GetOnBoard.Portal</RootNamespace>
+    <AssemblyName>GetOnBoard.Portal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HowToPlay.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Scripts\BoardController.js" />
+    <Content Include="Scripts\GameManager.js" />
+    <Content Include="Scripts\Library\drag-min.js" />
+    <Content Include="Scripts\Library\drag.js" />
+    <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\Library\jquery-ui.min.js" />
+    <Content Include="Scripts\Library\jquery.min.js" />
+    <Content Include="Scripts\Library\JTemplate.js" />
+    <Content Include="Scripts\Login.js" />
+    <Content Include="Scripts\MovesManager.js" />
+    <Content Include="Scripts\Register.js" />
+    <Content Include="Scripts\Site.js" />
+    <Content Include="Styles\BoardLayout.css" />
+    <Content Include="Home.aspx" />
+    <Content Include="Styles\images\Direction.png" />
+    <Content Include="Styles\images\Direct_not_allowed.png" />
+    <Content Include="Styles\images\favicon.png" />
+    <Content Include="Styles\images\HorDirect.png" />
+    <Content Include="Styles\images\loading.gif" />
+    <Content Include="Styles\images\MatchColorOrNumber.png" />
+    <Content Include="Styles\images\SameTile.png" />
+    <Content Include="Styles\images\TilePos_not_allowed.png" />
+    <Content Include="Styles\images\tiles.png" />
+    <Content Include="Styles\images\tiles20x20.gif" />
+    <Content Include="Styles\images\Tiles_6_all_colors.png" />
+    <Content Include="Styles\images\Tiles_6_all_numbers1.png" />
+    <Content Include="Styles\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Styles\images\VerDirect.png" />
+    <Content Include="Styles\jquery-ui-1.7.1.custom.css" />
+    <Content Include="Styles\jquery-ui-1.9.0.custom.min.css" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\Login.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\Tiles.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HowToPlay.aspx.cs">
+      <DependentUpon>HowToPlay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HowToPlay.aspx.designer.cs">
+      <DependentUpon>HowToPlay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GetOnBoard.Core.Infra\GetOnBoard.Core.Infra.csproj">
+      <Project>{3038ac4e-7435-43b6-84f7-12bcf4bfc2c0}</Project>
+      <Name>GetOnBoard.Core.Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetOnBoard.Core.Model\GetOnBoard.Core.Model.csproj">
+      <Project>{266c5e85-7498-486d-a490-dd172f50db39}</Project>
+      <Name>GetOnBoard.Core.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetOnBoard.Services.DataContracts\GetOnBoard.Services.DataContracts.csproj">
+      <Project>{c2aacf00-5e45-40a8-bb04-5dbddc1ed276}</Project>
+      <Name>GetOnBoard.Services.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetOnBoard.Services.ServiceContracts\GetOnBoard.Services.ServiceContracts.csproj">
+      <Project>{57bef540-ecfb-4a87-b730-f294cea37867}</Project>
+      <Name>GetOnBoard.Services.ServiceContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetOnBoard.Services.ServiceImpl\GetOnBoard.Services.ServiceImpl.csproj">
+      <Project>{9ff6619b-0af7-41b4-b134-234fde84d91c}</Project>
+      <Name>GetOnBoard.Services.ServiceImpl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Prod.Web.config" />
+    <None Include="Properties\PublishProfiles\GOB.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45064</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

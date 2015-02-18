@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4D699C2-7289-45D1-8871-790D6CDCB1C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GetOnBoard.Core.Factories</RootNamespace>
+    <AssemblyName>GetOnBoard.Core.Factories</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheProviderFactory.cs" />
+    <Compile Include="GameProviderFactory.cs" />
+    <Compile Include="MovesProviderFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GetOnBoard.Core.Caching.HttpRuntime\GetOnBoard.Core.Caching.HttpRuntime.csproj">
+      <Project>{F998F793-57C8-4A6F-BCAA-3F030BDCA34D}</Project>
+      <Name>GetOnBoard.Core.Caching.HttpRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetOnBoard.Core.GameMgmt\GetOnBoard.Core.GameMgmt.csproj">
+      <Project>{0EAC438F-5475-4A44-9E82-C0807956032B}</Project>
+      <Name>GetOnBoard.Core.GameMgmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetOnBoard.Core.Interfaces\GetOnBoard.Core.Interfaces.csproj">
+      <Project>{E2DEBC02-67D1-4641-914F-1BA02107DCFA}</Project>
+      <Name>GetOnBoard.Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetOnBoard.Core.MovesMgmt\GetOnBoard.Core.MovesMgmt.csproj">
+      <Project>{7D7E0D09-F51C-4D5F-A804-34BE19C6669A}</Project>
+      <Name>GetOnBoard.Core.MovesMgmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetOnBoard.Data.Factories\GetOnBoard.Data.Factories.csproj">
+      <Project>{15A39BB4-AF2A-4F86-8809-807C25211A06}</Project>
+      <Name>GetOnBoard.Data.Factories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetOnBoard.Data.Interfaces\GetOnBoard.Data.Interfaces.csproj">
+      <Project>{C236E508-9B2F-4E64-B0FC-85A0B74C93FE}</Project>
+      <Name>GetOnBoard.Data.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
